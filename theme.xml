@@ -33,7 +33,7 @@ h2{font-size:clamp(34px,5vw,58px);color:var(--cream)}
 h2 em{font-style:italic;font-weight:500;color:var(--gold2)}
 p{font-size:17px;line-height:1.7}
 .lead{font-size:clamp(18px,2vw,21px);color:#D8DEEA;max-width:62ch}
-section{position:relative;padding:clamp(80px,10vw,130px) 0}
+.sec{position:relative;padding:clamp(80px,10vw,130px) 0}
 .rule{height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,162,78,0));width:140px;margin:22px 0 28px}
 .batik{position:absolute;inset:0;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='none' stroke='%23E6C77A' stroke-width='1.2'><path d='M80 10c25 0 40 15 40 35s-15 25-25 25-15-8-15-15 6-10 10-10M80 150c-25 0-40-15-40-35s15-25 25-25 15 8 15 15-6 10-10 10'/><circle cx='80' cy='80' r='6'/><path d='M10 80c0-25 15-40 35-40s25 15 25 25-8 15-15 15-10-6-10-10M150 80c0 25-15 40-35 40s-25-15-25-25 8-15 15-15 10 6 10 10'/></g></svg>");background-size:160px}
 
@@ -479,7 +479,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
 </header>
 <b:if cond='data:view.isHomepage'>
 
-<section class="hero" id="top">
+<div class="sec hero" id="top">
   <div class="bg"></div><div class="shade"></div><div class="beam"></div>
   <div class="wrap">
     <div class="tag"><i></i>Diluncurkan 28 September 2026</div>
@@ -493,7 +493,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
   </div>
   <div class="scroll"><span></span>Gulir</div>
   <div class="rails" aria-hidden="true"></div>
-</section>
+</div>
 
 <div class="strip">
   <div class="wrap">
@@ -503,7 +503,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
   </div>
 </div>
 
-<section class="profil" id="profil">
+<div class="sec profil" id="profil">
   <div class="batik" aria-hidden="true"></div>
   <div class="wrap">
     <div class="split">
@@ -596,10 +596,10 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
       </div>
     </div>
   </div>
-</section>
+</div>
 
 </b:if>
-<section expr:class='data:view.isHomepage ? "berita" : "berita postpage"' id="berita">
+<div expr:class='data:view.isHomepage ? "sec berita" : "sec berita postpage"' id="berita">
   <div class="wrap">
     <b:if cond='data:view.isHomepage'>
     <div class="rv">
@@ -668,10 +668,10 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
     <div class="ticker" aria-hidden="true"><div>Peluncuran KA Nusantara Explore <span>◆</span> Open Trip &amp; Charter <span>◆</span> Signature · Advance · Compact Class <span>◆</span> Grand Restaurant &amp; Lounge <span>◆</span> #AyoNaikKereta <span>◆</span> Contact Center 121 <span>◆</span> Peluncuran KA Nusantara Explore <span>◆</span> Open Trip &amp; Charter <span>◆</span> Signature · Advance · Compact Class <span>◆</span> Grand Restaurant &amp; Lounge <span>◆</span> #AyoNaikKereta <span>◆</span> Contact Center 121 <span>◆</span></div></div>
     </b:if>
   </div>
-</section>
+</div>
 <b:if cond='data:view.isHomepage'>
 
-<section class="jelajah" id="jelajah">
+<div class="sec jelajah" id="jelajah">
   <div class="wrap intro rv">
     <div class="eyebrow">Jelajahi Gerbong</div>
     <h2 style="margin-top:14px">Lima ruang, <em>satu rangkaian.</em></h2>
@@ -701,9 +701,9 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
     <div class="rail" aria-hidden="true"></div>
     <div class="hint">Terus gulir untuk menyusuri rangkaian</div>
   </div>
-</section>
+</div>
 
-<section class="galeri" id="galeri">
+<div class="sec galeri" id="galeri">
   <div class="batik" aria-hidden="true"></div>
   <div class="wrap">
     <div class="rv">
@@ -737,9 +737,9 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<section class="boarding" id="tiket">
+<div class="sec boarding" id="tiket">
   <div class="batik" aria-hidden="true"></div>
   <div class="wrap">
     <div class="rv">
@@ -780,7 +780,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
       <span class="note" id="bpnote"></span>
     </div>
   </div>
-</section>
+</div>
 
 </b:if>
 <footer>
@@ -803,12 +803,6 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
   <g fill="#0A1222" stroke="#C9A24E" stroke-width="2"><circle cx="60" cy="118" r="12"/><circle cx="230" cy="118" r="12"/><circle cx="330" cy="118" r="12"/><circle cx="500" cy="118" r="12"/><circle cx="600" cy="118" r="12"/><circle cx="770" cy="118" r="12"/><circle cx="860" cy="118" r="12"/></g>
   <text x="400" y="134" font-family="Cormorant Garamond, serif" font-size="14" fill="#E6C77A" text-anchor="middle" letter-spacing="4">NUSANTARA EXPLORE</text>
 </svg>
-<div class="reader" id="reader">
-  <article>
-    <button class="close" id="rclose" aria-label="Tutup">✕</button>
-    <div id="rbody"></div>
-  </article>
-</div>
 <div class="lightbox" id="lb"><img id="lbimg" alt=""/></div>
 
 
