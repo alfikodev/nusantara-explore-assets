@@ -618,7 +618,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
                 <b:if cond='data:i == 0'>
                   <article class='feature rv'>
                     <a class='img' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img expr:alt='data:post.title' expr:src='data:post.featuredImage'/><b:else/><img alt='' src='https://alfikodev.github.io/nusantara-explore-assets/img/peluncuran.jpg'/></b:if></a>
-                    <div class='dateline'><i><b:if cond='data:post.labels'><data:post.labels.first.name/><b:else/>Berita</b:if></i> Jakarta, <b:eval expr='format(data:post.date, "d MMMM yyyy")'/></div>
+                    <div class='dateline'><i><b:if cond='data:post.labels'><b:loop index='li' values='data:post.labels' var='l'><b:if cond='data:li == 0'><data:l.name/></b:if></b:loop><b:else/>Berita</b:if></i> Jakarta, <data:post.date/></div>
                     <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
                     <p><data:post.snippets.long/></p>
                     <a class='more' expr:href='data:post.url'>Baca selengkapnya &#8594;</a>
@@ -630,7 +630,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
                   <b:if cond='data:i != 0'>
                     <article class='card rv'>
                       <a class='img' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img expr:alt='data:post.title' expr:src='data:post.featuredImage'/><b:else/><img alt='' src='https://alfikodev.github.io/nusantara-explore-assets/img/poster.jpg'/></b:if></a>
-                      <div><div class='k'><b:if cond='data:post.labels'><data:post.labels.first.name/><b:else/>Berita</b:if></div><h3><a expr:href='data:post.url'><data:post.title/></a></h3><p><data:post.snippets.short/></p><a class='more' expr:href='data:post.url'>Baca &#8594;</a></div>
+                      <div><div class='k'><b:if cond='data:post.labels'><b:loop index='li' values='data:post.labels' var='l'><b:if cond='data:li == 0'><data:l.name/></b:if></b:loop><b:else/>Berita</b:if></div><h3><a expr:href='data:post.url'><data:post.title/></a></h3><p><data:post.snippets.short/></p><a class='more' expr:href='data:post.url'>Baca &#8594;</a></div>
                     </article>
                   </b:if>
                 </b:loop>
@@ -645,7 +645,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
           <b:else/>
             <b:loop values='data:posts' var='post'>
               <article class='post' expr:id='"post-" + data:post.id'>
-                <div class='dateline'><i><b:if cond='data:post.labels'><data:post.labels.first.name/><b:else/>Berita</b:if></i> <b:if cond='data:view.isPost'>Jakarta, <b:eval expr='format(data:post.date, "d MMMM yyyy")'/></b:if></div>
+                <div class='dateline'><i><b:if cond='data:post.labels'><b:loop index='li' values='data:post.labels' var='l'><b:if cond='data:li == 0'><data:l.name/></b:if></b:loop><b:else/>Berita</b:if></i> <b:if cond='data:view.isPost'>Jakarta, <data:post.date/></b:if></div>
                 <h1 class='ptitle'><data:post.title/></h1>
                 <div class='byline'>Oleh <data:post.author.name/> &#183; Corporate Communication PT Kereta Api Indonesia (Persero)</div>
                 <div class='post-body'><data:post.body/></div>
