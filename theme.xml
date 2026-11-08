@@ -8,7 +8,7 @@
 <meta content='Weblog resmi komunikasi perusahaan PT KAI untuk KA Nusantara Explore: profil perusahaan, berita peluncuran, dan galeri kegiatan komunikasi.' name='description'/>
 <meta content='Nusantara Explore &#183; Jurnal Komunikasi PT Kereta Api Indonesia (Persero)' property='og:title'/>
 <meta content='Jelajahi Indonesia dengan cara yang berbeda. Profil, berita peluncuran, dan galeri komunikasi KA Nusantara Explore.' property='og:description'/>
-<meta content='https://alfikodev.github.io/nusantara-explore-assets/img/hero-train.jpg' property='og:image'/>
+<meta content='https://alfikodev.github.io/nusantara-explore-assets/img/hero-train.jpg?v=2' property='og:image'/>
 <meta content='summary_large_image' name='twitter:card'/>
 <b:include data='blog' name='all-head-content'/>
 <link href='https://fonts.googleapis.com' rel='preconnect'/><link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
@@ -72,7 +72,7 @@ header.solid{background:rgba(6,17,31,.82);backdrop-filter:blur(14px);box-shadow:
 
 /* hero */
 .hero{min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 90px;overflow:hidden;background:var(--ink)}
-.hero .bg{position:absolute;inset:0;background:url(https://alfikodev.github.io/nusantara-explore-assets/img/hero-train.jpg) 30% 50%/cover no-repeat;transform:scale(1.03);animation:drift 16s ease-in-out infinite alternate;filter:saturate(1.05)}
+.hero .bg{position:absolute;inset:0;background:url(https://alfikodev.github.io/nusantara-explore-assets/img/hero-train.jpg?v=2) 30% 50%/cover no-repeat;transform:scale(1.03);animation:drift 16s ease-in-out infinite alternate;filter:saturate(1.05)}
 @keyframes drift{from{transform:scale(1.03) translateX(0)}to{transform:scale(1.08) translateX(-1.2%)}}
 .hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,31,.45) 0%,rgba(6,17,31,0) 30%,rgba(6,17,31,.25) 55%,rgba(6,17,31,.92) 100%),linear-gradient(90deg,rgba(6,17,31,.75),rgba(6,17,31,0) 62%)}
 .hero .beam{display:none;position:absolute;right:-10%;top:35%;width:60%;height:30%;background:radial-gradient(60% 50% at 80% 50%,rgba(230,199,122,.35),rgba(230,199,122,0) 70%);mix-blend-mode:screen;animation:beam 3s ease-in-out infinite alternate;pointer-events:none}
@@ -332,7 +332,7 @@ html[data-mode="siang"] .pin .stars{opacity:0}
 .car .body:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--goldd),var(--gold2),var(--goldd))}
 .car .body:after{content:"";position:absolute;left:0;right:0;bottom:36px;height:3px;background:linear-gradient(90deg,var(--goldd),var(--gold2),var(--goldd));opacity:.8}
 .car .win2{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line)}
-.car .win2 img{width:100%;height:100%;object-fit:cover;object-position:center 72%;transform:scale(1.02)}
+.car .win2 img{width:100%;height:100%;object-fit:cover;object-position:center;transform:scale(1.02)}
 .car .win2:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 10px #142A4D,inset 0 0 0 11px var(--gold);pointer-events:none}
 .car .win2 .glare{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 40%);pointer-events:none}
 .car .txt{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;margin-top:18px;padding-bottom:14px}
@@ -522,8 +522,8 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
         </div>
       </div>
       <div class="window rv">
-        <img src="https://alfikodev.github.io/nusantara-explore-assets/img/poster.jpg" alt="Poster resmi KA Nusantara Explore"/>
-        <div class="cap">Poster resmi · #AyoNaikKereta</div>
+        <img src="https://alfikodev.github.io/nusantara-explore-assets/img/exterior.jpg" alt="Gerbong Advanced Class KA Nusantara Explore" style="object-position:100% 50%"/>
+        <div class="cap">Gerbong Advanced Class · Foto: GNFI</div>
       </div>
     </div>
 
@@ -683,19 +683,19 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
     <div class="stars" aria-hidden="true"></div>
     <div class="prog" aria-hidden="true"><i id="pinprog"></i></div>
     <div class="train" id="train">
-      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-signature.jpg" alt="Signature Class"/><div class="glare"></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-signature.jpg?v=2" alt="Signature Class"/><div class="glare"></div></div>
         <div class="txt"><div class="no">01</div><div><h3>Signature Class</h3><p>Kabin paling privat dengan tempat tidur, sofa, televisi, mini bar, dan kamar mandi pribadi dengan shower.</p></div></div></div>
         <div class="wheels"><i></i><i></i></div></div>
-      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-advance.jpg" alt="Advance Class"/><div class="glare"></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-advance.jpg?v=2" alt="Advance Class"/><div class="glare"></div></div>
         <div class="txt"><div class="no">02</div><div><h3>Advance Class</h3><p>Kabin pribadi dengan tempat tidur, televisi, mini bar, dan kamar mandi sendiri untuk perjalanan jauh yang tenang.</p></div></div></div>
         <div class="wheels"><i></i><i></i></div></div>
-      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-compact.jpg" alt="Compact Class"/><div class="glare"></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-compact.jpg?v=2" alt="Compact Class"/><div class="glare"></div></div>
         <div class="txt"><div class="no">03</div><div><h3>Compact Class</h3><p>Kabin praktis yang tetap nyaman: tempat tidur, televisi, mini bar, serta toilet dan shower bersama.</p></div></div></div>
         <div class="wheels"><i></i><i></i></div></div>
-      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-grand.jpg" alt="Grand Restaurant"/><div class="glare"></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-grand.jpg?v=2" alt="Grand Restaurant"/><div class="glare"></div></div>
         <div class="txt"><div class="no">04</div><div><h3>Grand Restaurant</h3><p>Meja makan menghadap jendela besar, hidangan istimewa dinikmati bersama pemandangan yang terus berganti.</p></div></div></div>
         <div class="wheels"><i></i><i></i></div></div>
-      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-lounge.jpg" alt="Lounge"/><div class="glare"></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-lounge.jpg?v=2" alt="Lounge"/><div class="glare"></div></div>
         <div class="txt"><div class="no">05</div><div><h3>Lounge</h3><p>Ruang bersama yang hangat dan elegan untuk bersantai, berbincang, dan menikmati alunan musik.</p></div></div></div>
         <div class="wheels"><i></i><i></i></div></div>
       <div class="loco2"><div class="body"><div class="brand2">Nusantara<br/>Explore<small>Lokomotif · KAI</small></div><div class="grill"></div><div class="lamp"></div><div class="beam2"></div></div></div>
