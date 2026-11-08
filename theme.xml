@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' class='v2' expr:dir='data:blog.languageDirection' lang='id' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+<meta charset='utf-8'/>
+<meta content='width=device-width,initial-scale=1' name='viewport'/>
+<title><data:view.title.escaped/></title>
+<meta content='Weblog resmi komunikasi perusahaan PT KAI untuk KA Nusantara Explore: profil perusahaan, berita peluncuran, dan galeri kegiatan komunikasi.' name='description'/>
+<meta content='Nusantara Explore &#183; Jurnal Komunikasi PT Kereta Api Indonesia (Persero)' property='og:title'/>
+<meta content='Jelajahi Indonesia dengan cara yang berbeda. Profil, berita peluncuran, dan galeri komunikasi KA Nusantara Explore.' property='og:description'/>
+<meta content='https://alfikodev.github.io/nusantara-explore-assets/img/hero-train.jpg' property='og:image'/>
+<meta content='summary_large_image' name='twitter:card'/>
+<b:include data='blog' name='all-head-content'/>
+<link href='https://fonts.googleapis.com' rel='preconnect'/><link crossorigin='anonymous' href='https://fonts.gstatic.com' rel='preconnect'/>
+<link href='https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap' rel='stylesheet'/>
+<b:skin><![CDATA[
+
+:root{
+  --navy:#0B1F3A;--navy2:#132B4F;--ink:#06111F;--cream:#F3EADA;--cream2:#E8DCC4;--paper:#FBF6EC;
+  --gold:#C9A24E;--gold2:#E6C77A;--goldd:#8F6E2E;--orange:#E8762B;--mute:#9AA7BE;--line:rgba(201,162,78,.28);
+  --serif:"Cormorant Garamond",Georgia,serif;--sans:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);background:var(--navy);color:var(--cream);line-height:1.65;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.serif{font-family:var(--serif)}
+.eyebrow{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:700}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,58px);color:var(--cream)}
+h2 em{font-style:italic;font-weight:500;color:var(--gold2)}
+p{font-size:17px;line-height:1.7}
+.lead{font-size:clamp(18px,2vw,21px);color:#D8DEEA;max-width:62ch}
+section{position:relative;padding:clamp(80px,10vw,130px) 0}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold),rgba(201,162,78,0));width:140px;margin:22px 0 28px}
+.batik{position:absolute;inset:0;pointer-events:none;opacity:.06;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'><g fill='none' stroke='%23E6C77A' stroke-width='1.2'><path d='M80 10c25 0 40 15 40 35s-15 25-25 25-15-8-15-15 6-10 10-10M80 150c-25 0-40-15-40-35s15-25 25-25 15 8 15 15-6 10-10 10'/><circle cx='80' cy='80' r='6'/><path d='M10 80c0-25 15-40 35-40s25 15 25 25-8 15-15 15-10-6-10-10M150 80c0 25-15 40-35 40s-25-15-25-25 8-15 15-15 10 6 10 10'/></g></svg>");background-size:160px}
+
+/* preloader ticket */
+#boarding{position:fixed;inset:0;z-index:100;background:var(--ink);display:flex;align-items:center;justify-content:center;transition:opacity .7s ease,visibility .7s}
+#boarding.done{opacity:0;visibility:hidden}
+.ticket{width:min(520px,88vw);border:1px solid var(--line);background:linear-gradient(135deg,#102546,#0B1B33);border-radius:14px;padding:26px 28px;position:relative;box-shadow:0 40px 80px rgba(0,0,0,.6);overflow:hidden}
+.ticket:before,.ticket:after{content:"";position:absolute;top:50%;width:26px;height:26px;border-radius:50%;background:var(--ink);transform:translateY(-50%)}
+.ticket:before{left:-13px}.ticket:after{right:-13px}
+.ticket .row{display:flex;justify-content:space-between;align-items:flex-end;gap:16px}
+.ticket .big{font-family:var(--serif);font-size:clamp(30px,6vw,46px);font-weight:600;color:var(--cream);line-height:1}
+.ticket .k{font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:700}
+.ticket .v{font-size:14px;color:#D8DEEA;margin-top:4px}
+.ticket .dash{border-top:1px dashed rgba(201,162,78,.5);margin:18px 0}
+.stamp{position:absolute;right:26px;top:22px;border:3px solid var(--orange);color:var(--orange);font-weight:800;letter-spacing:.2em;font-size:13px;padding:6px 12px;border-radius:6px;transform:rotate(-12deg) scale(2);opacity:0;animation:stamp .5s .6s cubic-bezier(.2,1.4,.4,1) forwards}
+@keyframes stamp{to{transform:rotate(-12deg) scale(1);opacity:1}}
+.track{height:3px;background:rgba(255,255,255,.08);border-radius:3px;overflow:hidden;margin-top:6px}
+.track i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));animation:fill 1.5s .2s ease forwards}
+@keyframes fill{to{width:100%}}
+
+/* nav */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .4s,backdrop-filter .4s,box-shadow .4s}
+header.solid{background:rgba(6,17,31,.82);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;background:radial-gradient(circle at 30% 30%,rgba(230,199,122,.25),transparent 70%)}
+.logo .mark svg{width:22px;height:22px}
+.logo b{font-family:var(--serif);font-size:22px;white-space:nowrap;font-weight:600;letter-spacing:.02em;color:var(--cream)}
+.logo small{display:block;font-size:9px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:700;margin-top:-2px}
+.menu{display:flex;gap:6px;list-style:none;order:1}.navr{order:2}
+.menu a{display:flex;align-items:center;min-height:44px;padding:0 16px;border-radius:30px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#D8DEEA;transition:.25s}
+.menu a:hover,.menu a.on{color:var(--navy);background:var(--gold2)}
+.burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--cream);cursor:pointer}
+@media(max-width:820px){.menu{display:none;position:fixed;inset:74px 20px auto;background:rgba(6,17,31,.96);border:1px solid var(--line);border-radius:18px;padding:12px;flex-direction:column}
+.menu.open{display:flex}.menu a{justify-content:center}.burger{display:block}}
+
+/* hero */
+.hero{min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 90px;overflow:hidden;background:var(--ink)}
+.hero .bg{position:absolute;inset:0;background:url(https://alfikodev.github.io/nusantara-explore-assets/img/hero-train.jpg) 100% 45%/cover no-repeat;transform:scale(1.08);animation:drift 14s ease-in-out infinite alternate;filter:saturate(1.05)}
+@keyframes drift{from{transform:scale(1.08) translateX(0)}to{transform:scale(1.14) translateX(1.5%)}}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,17,31,.55) 0%,rgba(6,17,31,.15) 40%,rgba(6,17,31,.92) 100%),linear-gradient(90deg,rgba(6,17,31,.85),rgba(6,17,31,.1) 60%)}
+.hero .beam{position:absolute;right:-10%;top:35%;width:60%;height:30%;background:radial-gradient(60% 50% at 80% 50%,rgba(230,199,122,.35),rgba(230,199,122,0) 70%);mix-blend-mode:screen;animation:beam 3s ease-in-out infinite alternate;pointer-events:none}
+@keyframes beam{to{opacity:.6}}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(50px,9vw,118px);font-weight:600;color:var(--cream);letter-spacing:-.02em;line-height:.95;text-shadow:0 6px 40px rgba(0,0,0,.5)}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--gold2);display:block}
+.hero .sub{margin-top:26px;max-width:58ch;font-size:clamp(17px,2vw,21px);color:#E3E8F1;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:38px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:40px;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;transition:.3s;border:1px solid transparent}
+.btn.gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);box-shadow:0 12px 30px rgba(201,162,78,.3)}
+.btn.gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(201,162,78,.45)}
+.btn.ghost{border-color:rgba(243,234,218,.4);color:var(--cream);backdrop-filter:blur(6px);background:rgba(6,17,31,.25)}
+.btn.ghost:hover{border-color:var(--gold2);color:var(--gold2)}
+.hero .tag{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);background:rgba(6,17,31,.55);backdrop-filter:blur(8px);padding:8px 16px;border-radius:30px;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2);font-weight:700;margin-bottom:26px}
+.hero .tag i{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 12px var(--orange);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.3}}
+.rails{position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(90deg,var(--gold) 0 28px,transparent 28px 44px);opacity:.35;mask:linear-gradient(90deg,transparent,#000 20%,#000 80%,transparent)}
+.scroll{position:absolute;right:40px;bottom:40px;display:flex;flex-direction:column;align-items:center;gap:8px;font-size:10px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:700}
+.scroll span{width:1px;height:48px;background:linear-gradient(var(--gold),transparent);animation:down 1.8s infinite}
+@keyframes down{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media(max-width:820px){.scroll{display:none}.hero{padding:120px 0 70px}}
+
+/* station strip */
+.strip{background:var(--cream);color:var(--navy);padding:0}
+.strip .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.stop{display:flex;gap:18px;align-items:center;padding:28px 22px;border-right:1px solid rgba(11,31,58,.12);transition:background .3s;min-height:110px}
+.stop:last-child{border-right:0}
+.stop:hover{background:#EFE4CF}
+.stop .n{font-family:var(--serif);font-size:44px;font-weight:600;color:var(--goldd);line-height:1}
+.stop b{display:block;font-family:var(--serif);font-size:24px;font-weight:600;line-height:1.1}
+.stop small{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#4A5770;font-weight:600}
+@media(max-width:820px){.strip .wrap{grid-template-columns:1fr;width:100%}.stop{border-right:0;border-bottom:1px solid rgba(11,31,58,.12);padding:20px 24px;min-height:0}}
+
+/* profil */
+.profil{background:linear-gradient(180deg,var(--navy),#0A1A32)}
+.split{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:40px}}
+.window{position:relative;border-radius:56px 56px 24px 24px;overflow:hidden;border:1px solid var(--line);box-shadow:0 40px 80px rgba(0,0,0,.5);aspect-ratio:3/4;max-height:620px}
+.window img{width:100%;height:100%;object-fit:cover;object-position:center}
+.window:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 10px var(--navy2),inset 0 0 0 11px var(--gold);border-radius:inherit;pointer-events:none}
+.window .cap{position:absolute;left:0;right:0;bottom:0;padding:22px 26px;background:linear-gradient(transparent,rgba(6,17,31,.9));font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold2);font-weight:700}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+.fact{border:1px solid var(--line);border-radius:14px;padding:18px 16px;background:rgba(255,255,255,.03)}
+.fact b{display:block;font-family:var(--serif);font-size:38px;color:var(--gold2);font-weight:600;line-height:1}
+.fact span{font-size:12px;color:var(--mute);letter-spacing:.06em;line-height:1.4;display:block;margin-top:6px}
+@media(max-width:600px){.facts{grid-template-columns:1fr 1fr}}
+
+/* departure board */
+.board{margin-top:80px;background:#070F1C;border:1px solid rgba(201,162,78,.35);border-radius:20px;padding:30px;box-shadow:0 40px 80px rgba(0,0,0,.5),inset 0 0 0 1px rgba(255,255,255,.03)}
+.board .hd{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.08);margin-bottom:20px}
+.board .hd .t{font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.board .hd .clock{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--gold2);font-size:13px;letter-spacing:.14em}
+.brow{display:grid;grid-template-columns:120px 1fr;gap:20px;align-items:start;padding:18px 0;border-bottom:1px dashed rgba(255,255,255,.08)}
+.brow:last-child{border-bottom:0}
+.brow .lab{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;padding-top:6px}
+.flap{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:clamp(15px,1.5vw,19px);line-height:1.55;color:#F7EFD9;letter-spacing:.04em}
+.flap span{display:inline-block;background:#121D30;border-radius:3px;padding:2px 1px;margin:1px 0;min-width:.62em;text-align:center;box-shadow:inset 0 -1px 0 rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06)}
+.flap span.sp{background:transparent;box-shadow:none}
+.flap .w{white-space:nowrap;display:inline-block}
+@media(max-width:700px){.brow{grid-template-columns:1fr;gap:6px}.flap span{min-width:.58em;padding:1px 0}}
+
+/* rail map struktur */
+.railmap{margin-top:80px}
+.railmap .map{position:relative;border:1px solid var(--line);border-radius:20px;padding:30px;background:rgba(255,255,255,.025);overflow:hidden}
+.railmap svg{width:100%;height:auto;display:block}
+.railmap svg.v{display:none}
+@media(max-width:700px){.railmap svg.h{display:none}.railmap svg.v{display:block;max-width:360px;margin:0 auto}}
+.railmap .legend{margin-top:16px;font-size:13px;color:var(--mute)}
+.units{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}
+.unit{display:flex;align-items:center;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:rgba(6,17,31,.6);font-size:13.5px;font-weight:600;color:#E3E8F1;transition:.3s}
+.unit:hover{border-color:var(--gold2);transform:translateY(-2px)}
+.unit i{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px rgba(201,162,78,.18);flex:none}
+.unit.hl{border-color:var(--gold);background:linear-gradient(135deg,rgba(201,162,78,.2),rgba(201,162,78,.04))}
+.unit.hl i{background:var(--orange);box-shadow:0 0 0 4px rgba(232,118,43,.22)}
+@media(max-width:900px){.units{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.units{grid-template-columns:1fr}}
+
+/* bidang usaha */
+.usaha{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.gerbong{position:relative;border:1px solid var(--line);border-radius:18px;padding:28px 22px 24px;background:linear-gradient(170deg,rgba(255,255,255,.06),rgba(255,255,255,.015));overflow:hidden;transition:.35s}
+.gerbong:before{content:"";position:absolute;left:18px;right:18px;top:0;height:3px;background:linear-gradient(90deg,var(--gold2),var(--gold));border-radius:0 0 4px 4px}
+.gerbong:hover{transform:translateY(-6px);border-color:var(--gold2);box-shadow:0 30px 60px rgba(0,0,0,.4)}
+.gerbong .ic{width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;margin-bottom:18px;background:radial-gradient(circle at 30% 30%,rgba(230,199,122,.25),transparent 70%)}
+.gerbong .ic svg{width:22px;height:22px;stroke:var(--gold2);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.gerbong h3{font-size:24px;color:var(--cream);margin-bottom:8px}
+.gerbong p{font-size:14.5px;color:var(--mute);line-height:1.6}
+.gerbong .num{position:absolute;right:18px;top:16px;font-family:var(--serif);font-style:italic;color:rgba(201,162,78,.35);font-size:30px}
+@media(max-width:1000px){.usaha{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.usaha{grid-template-columns:1fr}}
+
+/* berita (koran) */
+.berita{background:var(--paper);color:var(--ink)}
+.berita h2{color:var(--navy)}.berita h2 em{color:var(--goldd)}
+.berita .eyebrow{color:#7A5C22}
+.masthead{border-top:3px double var(--navy);border-bottom:1px solid var(--navy);padding:14px 0;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--navy);margin-top:36px;flex-wrap:wrap;gap:8px}
+.masthead b{font-family:var(--serif);font-size:30px;letter-spacing:0;text-transform:none;font-weight:600}
+.news{display:grid;grid-template-columns:1.35fr 1fr;gap:36px;margin-top:36px}
+@media(max-width:900px){.news{grid-template-columns:1fr}}
+.feature{position:relative;border-bottom:1px solid rgba(11,31,58,.2);padding-bottom:26px}
+.feature .img{aspect-ratio:16/10;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 30px 60px rgba(11,31,58,.18)}
+.feature .img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.feature:hover .img img{transform:scale(1.05)}
+.dateline{display:inline-flex;align-items:center;gap:10px;margin:22px 0 10px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:800;color:var(--navy)}
+.dateline i{display:inline-block;border:2px solid #A04512;color:#A04512;padding:3px 8px;border-radius:4px;transform:rotate(-3deg);font-style:normal}
+.feature h3{font-size:clamp(28px,3.4vw,42px);color:var(--navy);line-height:1.08}
+.feature p{margin-top:14px;color:#3B4760;font-size:16px}
+.more{display:inline-flex;align-items:center;gap:10px;min-height:44px;margin-top:14px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;color:var(--navy);border-bottom:2px solid var(--gold);cursor:pointer;background:none;border-top:0;border-left:0;border-right:0;font-family:var(--sans);padding:0}
+.more:hover{color:var(--goldd)}
+.side{display:flex;flex-direction:column;gap:22px}
+.card{display:grid;grid-template-columns:120px 1fr;gap:18px;padding-bottom:22px;border-bottom:1px solid rgba(11,31,58,.18)}
+.card .img{aspect-ratio:1;border-radius:10px;overflow:hidden}
+.card .img img{width:100%;height:100%;object-fit:cover}
+.card .k{font-size:10px;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:#7A5C22}
+.card h3{font-size:22px;color:var(--navy);margin:6px 0 8px;line-height:1.15}
+.card p{font-size:14px;color:#4A566F;line-height:1.55}
+.card .more{margin-top:8px;min-height:40px}
+@media(max-width:480px){.card{grid-template-columns:1fr}.card .img{aspect-ratio:16/9}}
+.ticker{margin-top:40px;border-top:1px solid var(--navy);border-bottom:1px solid var(--navy);padding:12px 0;overflow:hidden;white-space:nowrap}
+.ticker div{display:inline-block;animation:tick 28s linear infinite;font-size:12px;letter-spacing:.26em;text-transform:uppercase;font-weight:800;color:var(--navy)}
+.ticker span{margin:0 26px;color:var(--goldd)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* reader overlay */
+.reader{position:fixed;inset:0;z-index:90;background:rgba(6,17,31,.7);backdrop-filter:blur(8px);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:30px 16px}
+.reader.open{display:flex}
+.reader article{background:var(--paper);color:var(--ink);width:min(860px,100%);border-radius:18px;padding:clamp(28px,5vw,60px);position:relative;box-shadow:0 60px 120px rgba(0,0,0,.6);margin:auto}
+.reader .close{position:absolute;right:18px;top:18px;width:46px;height:46px;border-radius:50%;border:1px solid var(--navy);background:#fff;color:var(--navy);font-size:20px;cursor:pointer}
+.reader h3{font-size:clamp(28px,4vw,44px);color:var(--navy);line-height:1.08;margin:12px 0 18px}
+.reader .img{border-radius:12px;overflow:hidden;margin:22px 0}
+.reader p{color:#2E3A52;margin-bottom:16px;font-size:16.5px}
+.reader blockquote{border-left:3px solid var(--gold);padding:8px 20px;margin:22px 0;font-family:var(--serif);font-size:24px;font-style:italic;color:var(--navy);line-height:1.4}
+.reader .boiler{margin-top:28px;padding:18px 22px;background:#F0E7D4;border-radius:10px;font-size:14px;color:#4A566F}
+.reader .boiler b{color:var(--navy)}
+
+/* galeri */
+.galeri{background:var(--ink)}
+.winrow{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 0 30px;margin-top:30px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.winrow::-webkit-scrollbar{display:none}
+.win{flex:0 0 min(300px,72vw);scroll-snap-align:center;position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.6);background:#000;aspect-ratio:429/910;cursor:zoom-in;transition:transform .5s}
+.win img{width:100%;height:100%;object-fit:cover}
+.win:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 8px #142A4D,inset 0 0 0 9px var(--gold);pointer-events:none}
+.win:hover{transform:translateY(-8px)}
+.win .lbl{position:absolute;left:18px;bottom:18px;background:rgba(6,17,31,.8);border:1px solid var(--line);padding:6px 12px;border-radius:20px;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);font-weight:800;backdrop-filter:blur(6px)}
+.track2{height:14px;margin-top:-10px;background:repeating-linear-gradient(90deg,transparent 0 22px,rgba(201,162,78,.5) 22px 26px),linear-gradient(transparent 5px,rgba(201,162,78,.5) 5px 7px,transparent 7px);opacity:.5}
+.kegiatan{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:70px}
+@media(max-width:800px){.kegiatan{grid-template-columns:1fr}}
+.foto{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;cursor:zoom-in;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.foto img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s}
+.foto:hover img{transform:scale(1.05)}
+.foto .cap{position:absolute;left:0;right:0;bottom:0;padding:70px 24px 22px;background:linear-gradient(transparent,rgba(6,17,31,.95))}
+.foto .cap b{display:block;font-family:var(--serif);font-size:24px;color:var(--cream);font-weight:600;line-height:1.15}
+.foto .cap span{display:block;font-size:12.5px;color:#C5CEDD;margin-top:6px;line-height:1.5}
+.foto .cap small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-top:8px;font-weight:700}
+.foto .no{position:absolute;left:18px;top:16px;width:42px;height:42px;border-radius:50%;background:var(--gold2);color:var(--navy);display:grid;place-items:center;font-family:var(--serif);font-size:22px;font-weight:700}
+.lightbox{position:fixed;inset:0;z-index:95;background:rgba(6,17,31,.92);display:none;align-items:center;justify-content:center;padding:20px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:92vh;border-radius:12px;box-shadow:0 40px 100px rgba(0,0,0,.8)}
+
+/* footer stub */
+footer{background:var(--cream);color:var(--navy);padding:90px 0 40px;position:relative}
+.stub{border:1px solid rgba(11,31,58,.25);border-radius:18px;background:#fff;display:grid;grid-template-columns:1.2fr 1fr 1fr;position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(11,31,58,.14)}
+.stub>div{padding:34px 30px}
+.stub>div+div{border-left:1px dashed rgba(11,31,58,.35)}
+.stub .k{font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:800;color:var(--goldd);margin-bottom:8px}
+.stub .v{font-size:15px;line-height:1.6;color:#2E3A52}
+.stub .v a{display:inline-block;padding:10px 0;margin:-10px 0}.stub .v a:hover{color:var(--orange)}
+.stub .big{font-family:var(--serif);font-size:40px;font-weight:600;line-height:1}
+.stub .big small{display:block;font-size:12px;font-family:var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--goldd);font-weight:800;margin-top:6px}
+.stub:before,.stub:after{content:"";position:absolute;width:26px;height:26px;border-radius:50%;background:var(--cream);border:1px solid rgba(11,31,58,.25);left:calc(54.5% - 13px);top:-13px}
+.stub:after{top:auto;bottom:-13px}
+@media(max-width:860px){.stub{grid-template-columns:1fr}.stub>div+div{border-left:0;border-top:1px dashed rgba(11,31,58,.35)}.stub:before,.stub:after{display:none}}
+.credits{margin-top:34px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:#4A5770;letter-spacing:.06em}
+.credits b{color:var(--navy)}
+
+/* reveal */
+
+/* ===== progress train ===== */
+#ptrack{position:fixed;left:0;right:0;top:0;height:5px;z-index:70;pointer-events:none;background:repeating-linear-gradient(90deg,rgba(201,162,78,.45) 0 10px,transparent 10px 16px)}
+#ptrack .fill{position:absolute;left:0;top:0;height:100%;width:0;background:linear-gradient(90deg,var(--goldd),var(--gold2));box-shadow:0 0 10px rgba(230,199,122,.6)}
+#ptrack .loco{position:absolute;top:-9px;left:0;width:34px;height:22px;transform:translateX(-30px);filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
+#ptrack .stn{position:absolute;top:-3px;width:11px;height:11px;border-radius:50%;background:var(--navy);border:2px solid var(--gold);transform:translateX(-50%)}
+#ptrack .stn.on{background:var(--orange);border-color:var(--gold2);box-shadow:0 0 8px var(--orange)}
+header{top:5px}
+/* ===== sound ===== */
+.sndbar{position:fixed;right:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:10px}
+.sndbtn{display:flex;align-items:center;gap:10px;min-height:48px;padding:0 18px 0 14px;border-radius:30px;border:1px solid var(--line);background:rgba(6,17,31,.82);backdrop-filter:blur(10px);color:var(--gold2);font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.4);transition:.3s}
+.sndbtn:hover{border-color:var(--gold2)}
+.sndbtn .bars{display:flex;gap:3px;align-items:flex-end;height:16px}
+.sndbtn .bars i{width:3px;height:6px;background:var(--gold2);border-radius:2px;transition:.3s}
+.sndbtn.on .bars i{animation:eq .8s ease-in-out infinite alternate}
+.sndbtn.on .bars i:nth-child(2){animation-delay:.15s}.sndbtn.on .bars i:nth-child(3){animation-delay:.3s}.sndbtn.on .bars i:nth-child(4){animation-delay:.45s}
+@keyframes eq{from{height:4px}to{height:16px}}
+.sndbtn .lbl2{display:none}.sndbtn.on .lbl1{display:none}.sndbtn.on .lbl2{display:inline}
+@media(max-width:600px){.sndbtn{padding:0 14px}.sndbtn span.t{display:none}}
+/* ===== day/night switch ===== */
+.mode{display:flex;align-items:center;gap:8px;min-height:44px;padding:0 6px;border:0;background:transparent;cursor:pointer;color:var(--gold2);font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800}
+.mode .sw{width:46px;height:24px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);position:relative;transition:.3s}
+.mode .sw:after{content:"";position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--goldd));transition:.35s cubic-bezier(.3,1.4,.4,1);box-shadow:0 0 8px rgba(230,199,122,.6)}
+html[data-mode="siang"] .mode .sw:after{left:25px;background:linear-gradient(135deg,#FFD66B,#F0A830)}
+.mode .m2{display:none}html[data-mode="siang"] .mode .m1{display:none}html[data-mode="siang"] .mode .m2{display:inline}
+.navr{display:flex;align-items:center;gap:6px}
+@media(max-width:820px){.mode span.t{display:none!important}.logo b{font-size:18px}}
+html[data-mode="siang"]{--navy:#EEF1F6;--navy2:#E3E8F1;--ink:#DDE3EE;--cream:#0B1F3A;--cream2:#122A4E;--mute:#4A5770;--soft:#24344F;--line:rgba(143,110,46,.35);--gold:#A8842E;--gold2:#8F6E2E;--goldd:#6E531F;color-scheme:light}
+html[data-mode="siang"] body{background:var(--navy)}
+html[data-mode="siang"] .hero h1,html[data-mode="siang"] .hero .sub,html[data-mode="siang"] .btn.ghost,html[data-mode="siang"] .logo b,html[data-mode="siang"] .menu a,html[data-mode="siang"] .sndbtn,html[data-mode="siang"] .mode,html[data-mode="siang"] .hero .tag{color:#F3EADA}
+html[data-mode="siang"] .hero h1 em,html[data-mode="siang"] .hero .tag,html[data-mode="siang"] .logo small,html[data-mode="siang"] .mode,html[data-mode="siang"] .sndbtn{color:#E6C77A}
+html[data-mode="siang"] .hero .shade{background:linear-gradient(180deg,rgba(40,60,100,.35),rgba(20,35,70,.25) 40%,rgba(10,25,55,.9) 100%),linear-gradient(90deg,rgba(10,25,55,.8),rgba(10,25,55,.05) 60%)}
+html[data-mode="siang"] .hero .beam{background:radial-gradient(50% 45% at 85% 20%,rgba(255,225,150,.55),rgba(255,225,150,0) 70%);top:0;animation:none}
+html[data-mode="siang"] .hero .bg{filter:saturate(1.1) brightness(1.15)}
+html[data-mode="siang"] header.solid{background:rgba(11,31,58,.9)}
+html[data-mode="siang"] header:not(.solid) .mode,html[data-mode="siang"] header:not(.solid) .menu a{color:#F3EADA}
+html[data-mode="siang"] .menu a:hover,html[data-mode="siang"] .menu a.on{color:#0B1F3A;background:#E6C77A}
+html[data-mode="siang"] .strip{background:#0B1F3A;color:#F3EADA}
+html[data-mode="siang"] .stop{border-color:rgba(243,234,218,.15)}html[data-mode="siang"] .stop:hover{background:#132B4F}
+html[data-mode="siang"] .stop .n{color:#E6C77A}html[data-mode="siang"] .stop small{color:#9AA7BE}
+html[data-mode="siang"] .profil{background:linear-gradient(180deg,#EEF1F6,#E6EBF3)}
+html[data-mode="siang"] .batik{opacity:.12}
+html[data-mode="siang"] .fact,html[data-mode="siang"] .gerbong,html[data-mode="siang"] .unit,html[data-mode="siang"] .railmap .map{background:rgba(11,31,58,.045)}
+html[data-mode="siang"] .gerbong p{color:#3B4760}
+html[data-mode="siang"] .unit{color:#0B1F3A}
+html[data-mode="siang"] .railmap text{fill:#0B1F3A}html[data-mode="siang"] .railmap g[fill="#9AA7BE"] text{fill:#4A5770}html[data-mode="siang"] .railmap g[fill="#E6C77A"] text{fill:#6E531F}
+html[data-mode="siang"] .window .cap{color:#F3EADA}
+html[data-mode="siang"] .galeri{background:#E6EBF3}
+html[data-mode="siang"] .win .lbl{color:#E6C77A}
+html[data-mode="siang"] .foto .cap b{color:#F3EADA}html[data-mode="siang"] .foto .cap small{color:#E6C77A}
+html[data-mode="siang"] .board{box-shadow:0 30px 60px rgba(11,31,58,.25)}
+html[data-mode="siang"] .board .hd .t{color:#C9A24E}html[data-mode="siang"] .board .hd .clock{color:#E6C77A}
+html[data-mode="siang"] .boarding .pass{box-shadow:0 30px 60px rgba(11,31,58,.25)}
+html[data-mode="siang"] .pass .k,html[data-mode="siang"] .pass .big small{color:#C9A24E}
+html[data-mode="siang"] .pass .big,html[data-mode="siang"] .pass .v,html[data-mode="siang"] .pass .nm{color:#F3EADA}
+html[data-mode="siang"] .pass .v{color:#D8DEEA}
+html[data-mode="siang"] .pass .gerb b,html[data-mode="siang"] .pass .stamp2{color:#E6C77A}
+html[data-mode="siang"] .pass .stamp2{border-color:#E6C77A}
+html[data-mode="siang"] .pass .qr{background:#fff}
+html[data-mode="siang"] .pass .sig3{color:#9AA7BE}
+html[data-mode="siang"] .pass .dots{background:linear-gradient(90deg,rgba(230,199,122,.35) 0 8px,transparent 8px 16px)}
+html[data-mode="siang"] .lead{color:#24344F}
+html[data-mode="siang"] .fact span{color:#4A5770}
+html[data-mode="siang"] .boarding form input,html[data-mode="siang"] .boarding form select{background:#fff;color:#0B1F3A;border-color:rgba(11,31,58,.25)}
+html[data-mode="siang"] .pin .car .win2:after{box-shadow:inset 0 0 0 10px #0B1F3A,inset 0 0 0 11px #C9A24E}
+html[data-mode="siang"] .pin{background:linear-gradient(180deg,#E6EBF3,#EEF1F6)}
+html[data-mode="siang"] .car .body{background:linear-gradient(180deg,#132B4F,#0B1F3A)}
+html[data-mode="siang"] .car h3{color:#F3EADA}html[data-mode="siang"] .car p{color:#C5CEDD}
+html[data-mode="siang"] .car .no{color:#E6C77A}
+html[data-mode="siang"] .cross-train{filter:drop-shadow(0 10px 20px rgba(11,31,58,.4))}
+/* ===== jelajahi gerbong ===== */
+.jelajah{padding:0;background:var(--ink)}
+.jelajah .intro{padding:clamp(80px,10vw,120px) 0 20px}
+.pin{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;background:linear-gradient(180deg,#071221,#0B1F3A);display:flex;align-items:center}
+.pin .rail{position:absolute;left:0;right:0;bottom:17%;height:14px;background:repeating-linear-gradient(90deg,transparent 0 26px,rgba(201,162,78,.5) 26px 30px),linear-gradient(transparent 5px,rgba(201,162,78,.55) 5px 7px,transparent 7px,transparent 10px,rgba(201,162,78,.55) 10px 12px,transparent 12px);opacity:.7}
+.pin .stars{position:absolute;inset:0;background-image:radial-gradient(1px 1px at 20% 30%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 70% 20%,rgba(255,255,255,.4),transparent),radial-gradient(1.5px 1.5px at 40% 60%,rgba(255,255,255,.35),transparent),radial-gradient(1px 1px at 85% 45%,rgba(255,255,255,.5),transparent),radial-gradient(1px 1px at 10% 75%,rgba(255,255,255,.3),transparent);opacity:.6}
+html[data-mode="siang"] .pin .stars{opacity:0}
+.train{display:flex;align-items:flex-end;gap:14px;padding-left:12vw;will-change:transform}
+.car{flex:0 0 auto;width:min(560px,80vw);position:relative}
+.car .body{border-radius:28px 28px 14px 14px;background:linear-gradient(180deg,#0E1B33,#070F1C);border:1px solid var(--line);padding:22px 22px 26px;box-shadow:0 40px 80px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.06);position:relative;overflow:hidden}
+.car .body:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--goldd),var(--gold2),var(--goldd))}
+.car .body:after{content:"";position:absolute;left:0;right:0;bottom:36px;height:3px;background:linear-gradient(90deg,var(--goldd),var(--gold2),var(--goldd));opacity:.8}
+.car .win2{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;border:1px solid var(--line)}
+.car .win2 img{width:100%;height:100%;object-fit:cover;object-position:center 72%;transform:scale(1.02)}
+.car .win2:after{content:"";position:absolute;inset:0;border-radius:inherit;box-shadow:inset 0 0 0 10px #142A4D,inset 0 0 0 11px var(--gold);pointer-events:none}
+.car .win2 .glare{position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.12) 0%,rgba(255,255,255,0) 40%);pointer-events:none}
+.car .txt{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;margin-top:18px;padding-bottom:14px}
+.car .no{font-family:var(--serif);font-style:italic;font-size:40px;color:var(--gold2);line-height:1}
+.car h3{font-size:26px;color:var(--cream);margin-bottom:4px}
+.car p{font-size:14px;color:#B9C3D6;line-height:1.55}
+.car .wheels{display:flex;justify-content:space-between;padding:0 50px;margin-top:-6px}
+.car .wheels i{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle,#2A3A5E 0 28%,#0A1222 30% 55%,#C9A24E 57% 62%,#0A1222 64%);box-shadow:0 6px 12px rgba(0,0,0,.6);animation:spin 1.2s linear infinite;animation-play-state:paused}
+.pin.moving .car .wheels i{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loco2{flex:0 0 auto;width:min(380px,60vw);position:relative;padding-bottom:0}
+.loco2 .body{border-radius:36px 90px 14px 14px;background:linear-gradient(160deg,#152A52,#070F1C);border:1px solid var(--line);height:220px;position:relative;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.loco2 .body:before{content:"";position:absolute;left:0;right:0;top:40px;height:4px;background:linear-gradient(90deg,var(--goldd),var(--gold2))}
+.loco2 .body .lamp{position:absolute;right:28px;bottom:50px;width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#fff,#F1DDA8 40%,rgba(241,221,168,0) 70%);box-shadow:0 0 30px 10px rgba(241,221,168,.6)}
+.loco2 .body .beam2{position:absolute;right:-240px;bottom:30px;width:300px;height:70px;background:linear-gradient(90deg,rgba(241,221,168,.35),rgba(241,221,168,0));clip-path:polygon(0 40%,100% 0,100% 100%,0 60%)}
+.loco2 .body .brand2{position:absolute;left:28px;top:70px;font-family:var(--serif);font-size:30px;color:var(--cream);font-weight:600;line-height:1}
+.loco2 .body .brand2 small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;font-weight:800;margin-top:6px}
+.loco2 .body .grill{position:absolute;left:28px;bottom:36px;width:140px;height:28px;background:repeating-linear-gradient(90deg,var(--gold) 0 3px,transparent 3px 10px);opacity:.6;border-radius:4px}
+.pin .hint{position:absolute;left:50%;bottom:6%;transform:translateX(-50%);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:800;white-space:nowrap}
+.pin .prog{position:absolute;left:12vw;right:12vw;top:13%;height:2px;background:rgba(201,162,78,.2)}
+.pin .prog i{display:block;height:100%;width:0;background:var(--gold2)}
+@media(max-width:900px){.pin{position:relative;height:auto;overflow-x:auto;scroll-snap-type:x mandatory;padding:30px 0 60px;scrollbar-width:none}.pin::-webkit-scrollbar{display:none}.train{padding-left:20px;padding-right:20px;transform:none!important}.car{scroll-snap-align:center}.pin .rail{bottom:40px}.pin .hint,.pin .prog{display:none}.car .wheels i{animation-play-state:running}.loco2{display:none}}
+/* ===== boarding pass ===== */
+.boarding{background:var(--navy)}
+.boarding form{display:grid;grid-template-columns:1.4fr 1fr auto;gap:12px;margin-top:28px;max-width:720px}
+.boarding form input,.boarding form select{min-height:52px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--cream);padding:0 16px;font-family:var(--sans);font-size:15px;outline:none}
+.boarding form input:focus,.boarding form select:focus{border-color:var(--gold2)}
+.boarding form select option{color:#0B1F3A}
+.boarding form .btn{min-height:52px;cursor:pointer}
+@media(max-width:700px){.boarding form{grid-template-columns:1fr}}
+.pass{margin-top:40px;max-width:860px;border-radius:20px;background:linear-gradient(135deg,#102546,#0A1A32);border:1px solid rgba(201,162,78,.45);display:grid;grid-template-columns:1fr 240px;position:relative;overflow:hidden;box-shadow:0 50px 100px rgba(0,0,0,.6);opacity:0;transform:translateY(20px) rotateX(10deg);transition:.8s cubic-bezier(.2,.9,.3,1)}
+.pass.show{opacity:1;transform:none}
+.pass>div{padding:30px 32px}
+.pass .main{border-right:1px dashed rgba(201,162,78,.5)}
+.pass .top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.pass .big{font-family:var(--serif);font-size:30px;color:var(--cream);font-weight:600;line-height:1}
+.pass .big small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:800;margin-top:6px}
+.pass .stamp2{border:2px solid var(--gold2);color:var(--gold2);font-weight:800;letter-spacing:.2em;font-size:11px;padding:6px 10px;border-radius:6px;transform:rotate(-8deg)}
+.pass .nm{font-family:var(--serif);font-size:clamp(30px,4vw,44px);color:var(--cream);font-weight:600;margin:22px 0 4px;line-height:1.05;word-break:break-word}
+.pass .k{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);font-weight:800}
+.pass .v{font-size:15px;color:#D8DEEA;margin-top:4px}
+.pass .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px;padding-top:18px;border-top:1px solid rgba(201,162,78,.25)}
+.pass .gerb b{font-family:var(--serif);font-size:26px;color:var(--gold2);display:block;line-height:1.1}
+.pass .side2{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center}
+.pass .qr{background:#fff;padding:10px;border-radius:10px;width:148px;height:148px;display:grid;place-items:center}
+.pass .qr img,.pass .qr canvas{width:128px;height:128px}
+.pass .sig3{font-size:9px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute);font-weight:700;line-height:1.7}
+.pass .dots{position:absolute;left:0;right:0;bottom:0;height:8px;background:linear-gradient(90deg,rgba(201,162,78,.35) 0 8px,transparent 8px 16px)}
+.pass:before,.pass:after{content:"";position:absolute;width:26px;height:26px;border-radius:50%;background:var(--navy);border:1px solid rgba(201,162,78,.45);top:-13px;right:227px}
+.pass:after{top:auto;bottom:-13px}
+@media(max-width:700px){.pass{grid-template-columns:1fr}.pass .main{border-right:0;border-bottom:1px dashed rgba(201,162,78,.5)}.pass:before,.pass:after{display:none}.pass .grid{grid-template-columns:1fr 1fr}}
+.pass-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.pass-actions .btn{cursor:pointer;font-family:var(--sans)}
+.pass-actions .note{font-size:12px;color:var(--mute);width:100%}
+/* ===== easter egg train ===== */
+.cross-train{position:fixed;left:0;bottom:12%;z-index:80;pointer-events:none;transform:translateX(-120%);width:min(900px,160vw);filter:drop-shadow(0 20px 30px rgba(0,0,0,.6))}
+.cross-train.go{animation:cross 3.2s cubic-bezier(.3,0,.2,1) forwards}
+@keyframes cross{from{transform:translateX(-120%)}to{transform:translateX(110vw)}}
+
+html.js .rv{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+html.js .rv.in,html.js.ready .rv{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+
+/* ===== post page ===== */
+.berita.postpage{padding-top:130px;min-height:70vh}
+.berita.postpage .wrap{max-width:860px}
+.post .ptitle{font-size:clamp(32px,4.6vw,52px);color:var(--navy);line-height:1.06;margin:10px 0 14px}
+.post .byline{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#7A5C22;margin-bottom:28px;padding-bottom:18px;border-bottom:1px solid rgba(11,31,58,.2)}
+.post-body{color:#2E3A52;font-size:17px;line-height:1.8}
+.post-body p{margin:0 0 18px}
+.post-body h2,.post-body h3{font-family:var(--serif);color:var(--navy);margin:28px 0 10px;line-height:1.15}
+.post-body h2{font-size:32px}.post-body h3{font-size:26px}
+.post-body img{max-width:100%;height:auto;border-radius:14px;margin:8px 0 18px;box-shadow:0 30px 60px rgba(11,31,58,.18)}
+.post-body blockquote{border-left:3px solid var(--gold);padding:8px 20px;margin:22px 0;font-family:var(--serif);font-size:24px;font-style:italic;color:var(--navy);line-height:1.4}
+.post-body .boiler{margin-top:28px;padding:18px 22px;background:#F0E7D4;border-radius:10px;font-size:14px;color:#4A566F}
+.post-body .boiler b{color:var(--navy)}
+.post-body a{color:#7A5C22;text-decoration:underline}
+.post-body table{border-collapse:collapse;width:100%;font-size:14px;margin:12px 0 24px;display:block;overflow-x:auto}
+.post-body th,.post-body td{border:1px solid rgba(11,31,58,.25);padding:10px 12px;vertical-align:top;text-align:left}
+.post-body th{background:#0B1F3A;color:#F3EADA;font-weight:700}
+.labels{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 0}
+.lbl3{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--navy);border:1px solid rgba(11,31,58,.3);padding:8px 12px;border-radius:20px}
+.lbl3:hover{background:var(--navy);color:#F3EADA}
+.post-nav{display:flex;gap:12px;flex-wrap:wrap;margin:36px 0 0;padding-top:28px;border-top:1px solid rgba(11,31,58,.2)}
+.post-nav .btn.gold{color:var(--navy)}
+.post-nav .btn.ghost{border-color:rgba(11,31,58,.4);color:var(--navy)}
+.pager{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:30px}
+.feature h3 a,.card h3 a{color:inherit}
+.feature h3 a:hover,.card h3 a:hover{color:#7A5C22}
+.news .img{display:block}
+.comments{margin-top:50px;padding-top:30px;border-top:3px double var(--navy)}
+.comments h4,.comments h3{font-family:var(--serif);font-size:28px;color:var(--navy);margin-bottom:14px}
+.comments .comment-thread ol{list-style:none;padding:0}
+.comments .comment{padding:16px 0;border-bottom:1px solid rgba(11,31,58,.15)}
+.comments .comment-content{font-size:15px;color:#2E3A52}
+.comments .user{font-weight:700;color:var(--navy)}
+.comments .datetime{font-size:12px;color:#7A5C22}
+.comments iframe{width:100%!important;min-height:220px;border:0}
+.comments a{color:#7A5C22}
+#comment-editor{background:#fff;border-radius:10px}
+html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
+
+]]></b:skin>
+</head>
+<body expr:class='data:view.isHomepage ? "home" : "single"'>
+<b:if cond='data:view.isHomepage'>
+
+
+<div id="boarding" aria-hidden="true">
+  <div class="ticket">
+    <div class="stamp">BOARDING</div>
+    <div class="k">Tiket Masuk · Jurnal Komunikasi</div>
+    <div class="big">Nusantara<br/>Explore</div>
+    <div class="dash"></div>
+    <div class="row">
+      <div><div class="k">Dari</div><div class="v">PT Kereta Api Indonesia</div></div>
+      <div><div class="k">Menuju</div><div class="v">Profil · Berita · Galeri</div></div>
+      <div><div class="k">Gerbong</div><div class="v">Signature</div></div>
+    </div>
+    <div class="track"><i></i></div>
+  </div>
+</div>
+
+</b:if>
+<div id="ptrack" aria-hidden="true"><div class="fill"></div><span class="stn" data-for="profil"></span><span class="stn" data-for="berita"></span><span class="stn" data-for="galeri"></span>
+  <svg class="loco" viewBox="0 0 34 22" xmlns="http://www.w3.org/2000/svg"><path d="M2 14h20l8-6h2v8H2z" fill="#E6C77A"/><rect x="4" y="4" width="10" height="8" rx="2" fill="#F1DDA8"/><circle cx="8" cy="18" r="3" fill="#0B1F3A" stroke="#E6C77A" stroke-width="1.5"/><circle cx="24" cy="18" r="3" fill="#0B1F3A" stroke="#E6C77A" stroke-width="1.5"/><circle cx="30" cy="11" r="2" fill="#fff"/></svg></div>
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="logo" expr:href='data:blog.homepageUrl + "#top"'>
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#E6C77A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="13" rx="3"/><path d="M4 9h16M8 16l-2 4M16 16l2 4M9 12.5h.01M15 12.5h.01"/></svg></span>
+      <span><b>Nusantara Explore</b><small>Jurnal Komunikasi KAI</small></span>
+    </a>
+    <div class="navr">
+      <button class="mode" id="mode" aria-label="Ganti mode siang atau malam"><span class="t m1">Malam</span><span class="t m2">Siang</span><span class="sw"></span></button>
+      <button class="burger" id="burger" aria-label="Menu">☰</button>
+    </div>
+    <ul class="menu" id="menu">
+      <li><a expr:href='data:blog.homepageUrl + "#profil"'>Profil</a></li>
+      <li><a expr:href='data:blog.homepageUrl + "#berita"'>Berita</a></li>
+      <li><a expr:href='data:blog.homepageUrl + "#galeri"'>Galeri</a></li>
+    </ul>
+  </div>
+</header>
+<b:if cond='data:view.isHomepage'>
+
+<section class="hero" id="top">
+  <div class="bg"></div><div class="shade"></div><div class="beam"></div>
+  <div class="wrap">
+    <div class="tag"><i></i>Diluncurkan 28 September 2026</div>
+    <h1>Jelajahi Indonesia<em>dengan cara yang berbeda.</em></h1>
+    <p class="sub">Selamat datang di jurnal komunikasi resmi PT Kereta Api Indonesia (Persero) untuk KA Nusantara Explore, kereta wisata premium yang menyatukan perjalanan dan pengalaman berlibur dalam satu rangkaian.</p>
+    <div class="cta">
+      <a class="btn gold" href="#berita">Baca Berita Peluncuran</a>
+      <a class="btn ghost" href="#profil">Kenali PT KAI</a>
+      <button class="btn ghost" id="sndhero" type="button" style="font-family:var(--sans);cursor:pointer">♪ Nyalakan suasana stasiun</button>
+    </div>
+  </div>
+  <div class="scroll"><span></span>Gulir</div>
+  <div class="rails" aria-hidden="true"></div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <a class="stop" href="#profil"><span class="n">01</span><span><small>Stasiun pertama</small><b>Profil Perusahaan</b></span></a>
+    <a class="stop" href="#berita"><span class="n">02</span><span><small>Stasiun kedua</small><b>Berita &amp; Press Release</b></span></a>
+    <a class="stop" href="#galeri"><span class="n">03</span><span><small>Stasiun terakhir</small><b>Galeri Komunikasi</b></span></a>
+  </div>
+</div>
+
+<section class="profil" id="profil">
+  <div class="batik" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="split">
+      <div class="rv">
+        <div class="eyebrow">01 · Profil Perusahaan</div>
+        <h2 style="margin-top:14px">Membawa Indonesia<br/><em>bergerak lebih dekat.</em></h2>
+        <div class="rule"></div>
+        <p class="lead">PT Kereta Api Indonesia (Persero), atau KAI, adalah badan usaha milik negara yang bergerak di bidang transportasi kereta api. KAI melayani angkutan penumpang dan barang, sekaligus terus mengembangkan ekosistem perkeretaapian yang terintegrasi, mulai dari logistik, pariwisata, hingga layanan pendukung lainnya.</p>
+        <p style="margin-top:18px;color:var(--mute)">Seiring perkembangan teknologi dan kebutuhan masyarakat, KAI melakukan digitalisasi layanan, meningkatkan kualitas pelayanan, membangun fasilitas yang lebih baik, dan menghadirkan inovasi produk seperti KA Nusantara Explore.</p>
+        <div class="facts">
+          <div class="fact"><b>BUMN</b><span>Perusahaan milik negara di bawah Danantara Indonesia</span></div>
+          <div class="fact"><b>121</b><span>Contact Center pelanggan, kai.id</span></div>
+          <div class="fact"><b>2026</b><span>Tahun peluncuran KA Nusantara Explore</span></div>
+        </div>
+      </div>
+      <div class="window rv">
+        <img src="https://alfikodev.github.io/nusantara-explore-assets/img/poster.jpg" alt="Poster resmi KA Nusantara Explore"/>
+        <div class="cap">Poster resmi · #AyoNaikKereta</div>
+      </div>
+    </div>
+
+    <div class="board rv" id="board">
+      <div class="hd"><div class="t">Papan Keberangkatan · Visi &amp; Misi</div><div class="clock" id="clock">00:00:00</div></div>
+      <div class="brow"><div class="lab">Visi</div><div class="flap" data-text="Mendorong terciptanya ekosistem layanan kereta api yang efisien dan berkelanjutan menuju operator kelas dunia."></div></div>
+      <div class="brow"><div class="lab">Misi 01</div><div class="flap" data-text="Menyediakan layanan mobilitas yang mengutamakan keselamatan, ketepatan waktu, kenyamanan, efisiensi, dan keberlanjutan."></div></div>
+      <div class="brow"><div class="lab">Misi 02</div><div class="flap" data-text="Mengembangkan layanan angkutan penumpang dan logistik yang terintegrasi dalam ekosistem kereta api."></div></div>
+      <div class="brow"><div class="lab">Misi 03</div><div class="flap" data-text="Mendorong inovasi melalui pemanfaatan teknologi dan penguatan tata kelola perusahaan yang baik."></div></div>
+    </div>
+
+    <div class="railmap rv">
+      <div class="eyebrow">Struktur Organisasi</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,44px)">Jalur tata kelola <em>PT KAI.</em></h2>
+      <div class="map" style="margin-top:26px">
+        <svg class="h" viewBox="0 0 1100 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peta jalur struktur organisasi PT KAI">
+          <defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="60" y1="0" x2="1040" y2="0"><stop offset="0" stop-color="#E6C77A"/><stop offset="1" stop-color="#C9A24E"/></linearGradient></defs>
+          <path d="M60 150 H1040" stroke="url(#g)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M60 150 H1040" stroke="#0B1F3A" stroke-width="2" stroke-dasharray="14 18"/>
+          <g fill="#E8762B" stroke="#F3EADA" stroke-width="5">
+            <circle cx="160" cy="150" r="16"/><circle cx="450" cy="150" r="16"/><circle cx="740" cy="150" r="16"/>
+          </g>
+          <g font-family="Cormorant Garamond, Georgia, serif" font-size="30" font-weight="600" fill="#F3EADA" text-anchor="middle">
+            <text x="160" y="100">RUPS</text><text x="450" y="100">Dewan Komisaris</text><text x="740" y="100">Direksi</text>
+          </g>
+          <g font-family="Manrope, sans-serif" font-size="14" fill="#9AA7BE" text-anchor="middle">
+            <text x="160" y="200">Pemegang saham,</text><text x="160" y="220">keputusan tertinggi</text>
+            <text x="450" y="200">Mengawasi pengelolaan</text><text x="450" y="220">perusahaan</text>
+            <text x="740" y="200">Mengelola bisnis</text><text x="740" y="220">sehari-hari</text>
+          </g>
+          <path d="M740 150 c120 0 150 60 230 60" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M740 150 c120 0 150 -60 230 -60" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="970" cy="210" r="11" fill="#C9A24E"/><circle cx="970" cy="90" r="11" fill="#C9A24E"/>
+          <g font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#E6C77A" text-anchor="middle" letter-spacing="2">
+            <text x="970" y="68">DIREKTORAT</text><text x="970" y="248">UNIT KERJA</text>
+          </g>
+        </svg>
+        <svg class="v" viewBox="0 0 360 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peta jalur struktur organisasi PT KAI">
+          <defs><linearGradient id="gv" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="400"><stop offset="0" stop-color="#E6C77A"/><stop offset="1" stop-color="#C9A24E"/></linearGradient></defs>
+          <path d="M50 40 V400" stroke="url(#gv)" stroke-width="6" stroke-linecap="round"/>
+          <path d="M50 40 V400" stroke="#0B1F3A" stroke-width="2" stroke-dasharray="14 18"/>
+          <g fill="#E8762B" stroke="#F3EADA" stroke-width="5"><circle cx="50" cy="80" r="14"/><circle cx="50" cy="220" r="14"/><circle cx="50" cy="360" r="14"/></g>
+          <g font-family="Cormorant Garamond, Georgia, serif" font-size="28" font-weight="600" fill="#F3EADA"><text x="90" y="78">RUPS</text><text x="90" y="218">Dewan Komisaris</text><text x="90" y="358">Direksi</text></g>
+          <g font-family="Manrope, sans-serif" font-size="14" fill="#9AA7BE"><text x="90" y="104">Pemegang saham, keputusan tertinggi</text><text x="90" y="244">Mengawasi pengelolaan perusahaan</text><text x="90" y="384">Mengelola bisnis sehari-hari</text></g>
+          <path d="M50 360 c0 80 40 100 100 120" fill="none" stroke="url(#gv)" stroke-width="4" stroke-linecap="round"/>
+          <path d="M50 360 c0 80 -10 110 20 150" fill="none" stroke="url(#gv)" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="150" cy="480" r="10" fill="#C9A24E"/><circle cx="70" cy="510" r="10" fill="#C9A24E"/>
+          <g font-family="Manrope, sans-serif" font-size="13" font-weight="700" fill="#E6C77A" letter-spacing="2"><text x="170" y="485">DIREKTORAT</text><text x="90" y="515">UNIT KERJA</text></g>
+        </svg>
+        <div class="units">
+          <div class="unit"><i></i>Operasi</div>
+          <div class="unit"><i></i>Sarana &amp; Prasarana</div>
+          <div class="unit"><i></i>Komersial</div>
+          <div class="unit"><i></i>Keuangan</div>
+          <div class="unit"><i></i>Sumber Daya Manusia</div>
+          <div class="unit"><i></i>Keselamatan</div>
+          <div class="unit"><i></i>Teknologi Informasi</div>
+          <div class="unit hl"><i></i>Komunikasi Perusahaan</div>
+        </div>
+        <p class="legend">Komunikasi perusahaan menjadi simpul yang menghubungkan KAI dengan pelanggan, media, pemerintah, mitra bisnis, dan masyarakat luas. Di sinilah fungsi public relations bekerja: menginformasikan, membangun kepercayaan, dan menjaga reputasi perusahaan.</p>
+      </div>
+    </div>
+
+    <div class="rv" style="margin-top:80px">
+      <div class="eyebrow">Bidang Usaha</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,44px)">Satu rangkaian, <em>empat gerbong bisnis.</em></h2>
+      <div class="usaha">
+        <div class="gerbong"><span class="num">I</span><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div><h3>Angkutan Penumpang</h3><p>Layanan inti KAI: kereta jarak jauh, lokal, dan komuter yang mengutamakan keselamatan, ketepatan waktu, dan kenyamanan.</p></div>
+        <div class="gerbong"><span class="num">II</span><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="12" rx="2"/><path d="M3 11h18M8 7V4h8v3"/></svg></div><h3>Angkutan Barang &amp; Logistik</h3><p>Distribusi barang dan logistik berbasis rel yang efisien dan ramah lingkungan untuk mendukung perekonomian nasional.</p></div>
+        <div class="gerbong"><span class="num">III</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 20l6-12 4 7 3-4 5 9z"/><circle cx="17" cy="6" r="2"/></svg></div><h3>Pariwisata Kereta Api</h3><p>Pengalaman wisata berbasis kereta seperti KA Nusantara Explore, yang menjadikan perjalanan sebagai bagian dari liburan itu sendiri.</p></div>
+        <div class="gerbong"><span class="num">IV</span><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></svg></div><h3>Layanan Pendukung</h3><p>Digitalisasi tiket, pengelolaan stasiun, dan beragam layanan yang membentuk ekosistem perkeretaapian terintegrasi.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</b:if>
+<section expr:class='data:view.isHomepage ? "berita" : "berita postpage"' id="berita">
+  <div class="wrap">
+    <b:if cond='data:view.isHomepage'>
+    <div class="rv">
+      <div class="eyebrow">02 · Berita</div>
+      <h2 style="margin-top:14px">Kabar dari <em>ruang redaksi.</em></h2>
+      <div class="masthead"><b>Nusantara Explore</b><span>Edisi Peluncuran · Jakarta</span><span>Corporate Communication KAI</span></div>
+    </div>
+    </b:if>
+
+    <b:section class='main' id='main' showaddelement='no'>
+      <b:widget id='Blog1' locked='true' title='Berita' type='Blog' version='2'>
+        <b:includable id='main'>
+          <b:if cond='data:view.isMultipleItems'>
+            <div class='news'>
+              <b:loop index='i' values='data:posts' var='post'>
+                <b:if cond='data:i == 0'>
+                  <article class='feature rv'>
+                    <a class='img' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img expr:alt='data:post.title' expr:src='data:post.featuredImage'/><b:else/><img alt='' src='https://alfikodev.github.io/nusantara-explore-assets/img/peluncuran.jpg'/></b:if></a>
+                    <div class='dateline'><i><b:if cond='data:post.labels'><data:post.labels.first.name/><b:else/>Berita</b:if></i> Jakarta, <b:eval expr='format(data:post.date, "d MMMM yyyy")'/></div>
+                    <h3><a expr:href='data:post.url'><data:post.title/></a></h3>
+                    <p><data:post.snippets.long/></p>
+                    <a class='more' expr:href='data:post.url'>Baca selengkapnya &#8594;</a>
+                  </article>
+                </b:if>
+              </b:loop>
+              <div class='side'>
+                <b:loop index='i' values='data:posts' var='post'>
+                  <b:if cond='data:i != 0'>
+                    <article class='card rv'>
+                      <a class='img' expr:href='data:post.url'><b:if cond='data:post.featuredImage'><img expr:alt='data:post.title' expr:src='data:post.featuredImage'/><b:else/><img alt='' src='https://alfikodev.github.io/nusantara-explore-assets/img/poster.jpg'/></b:if></a>
+                      <div><div class='k'><b:if cond='data:post.labels'><data:post.labels.first.name/><b:else/>Berita</b:if></div><h3><a expr:href='data:post.url'><data:post.title/></a></h3><p><data:post.snippets.short/></p><a class='more' expr:href='data:post.url'>Baca &#8594;</a></div>
+                    </article>
+                  </b:if>
+                </b:loop>
+              </div>
+            </div>
+            <b:if cond='data:olderPageUrl or data:newerPageUrl'>
+              <div class='pager'>
+                <b:if cond='data:newerPageUrl'><a class='more' expr:href='data:newerPageUrl'>&#8592; Berita lebih baru</a></b:if>
+                <b:if cond='data:olderPageUrl'><a class='more' expr:href='data:olderPageUrl'>Berita lebih lama &#8594;</a></b:if>
+              </div>
+            </b:if>
+          <b:else/>
+            <b:loop values='data:posts' var='post'>
+              <article class='post' expr:id='"post-" + data:post.id'>
+                <div class='dateline'><i><b:if cond='data:post.labels'><data:post.labels.first.name/><b:else/>Berita</b:if></i> <b:if cond='data:view.isPost'>Jakarta, <b:eval expr='format(data:post.date, "d MMMM yyyy")'/></b:if></div>
+                <h1 class='ptitle'><data:post.title/></h1>
+                <div class='byline'>Oleh <data:post.author.name/> &#183; Corporate Communication PT Kereta Api Indonesia (Persero)</div>
+                <div class='post-body'><data:post.body/></div>
+                <b:if cond='data:post.labels'><div class='labels'><b:loop values='data:post.labels' var='label'><a class='lbl3' expr:href='data:label.url'><data:label.name/></a></b:loop></div></b:if>
+                <div class='post-nav'>
+                  <a class='btn gold' expr:href='data:blog.homepageUrl + "#berita"'>&#8592; Kembali ke Berita</a>
+                  <b:if cond='data:newerPageUrl'><a class='btn ghost' expr:href='data:newerPageUrl'>Berita lebih baru</a></b:if>
+                  <b:if cond='data:olderPageUrl'><a class='btn ghost' expr:href='data:olderPageUrl'>Berita lebih lama</a></b:if>
+                </div>
+                <b:if cond='data:view.isPost and data:post.allowComments'>
+                  <b:include data='post' name='comments'/>
+                </b:if>
+              </article>
+            </b:loop>
+          </b:if>
+        </b:includable>
+      </b:widget>
+    </b:section>
+    <b:if cond='data:view.isHomepage'>
+    <div class="ticker" aria-hidden="true"><div>Peluncuran KA Nusantara Explore <span>◆</span> Open Trip &amp; Charter <span>◆</span> Signature · Advance · Compact Class <span>◆</span> Grand Restaurant &amp; Lounge <span>◆</span> #AyoNaikKereta <span>◆</span> Contact Center 121 <span>◆</span> Peluncuran KA Nusantara Explore <span>◆</span> Open Trip &amp; Charter <span>◆</span> Signature · Advance · Compact Class <span>◆</span> Grand Restaurant &amp; Lounge <span>◆</span> #AyoNaikKereta <span>◆</span> Contact Center 121 <span>◆</span></div></div>
+    </b:if>
+  </div>
+</section>
+<b:if cond='data:view.isHomepage'>
+
+<section class="jelajah" id="jelajah">
+  <div class="wrap intro rv">
+    <div class="eyebrow">Jelajahi Gerbong</div>
+    <h2 style="margin-top:14px">Lima ruang, <em>satu rangkaian.</em></h2>
+    <p class="lead" style="margin-top:16px">Gulir perlahan dan rangkaian Nusantara Explore akan melintas di depan Anda, gerbong demi gerbong.</p>
+  </div>
+  <div class="pin" id="pin">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="prog" aria-hidden="true"><i id="pinprog"></i></div>
+    <div class="train" id="train">
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-signature.jpg" alt="Signature Class"/><div class="glare"></div></div>
+        <div class="txt"><div class="no">01</div><div><h3>Signature Class</h3><p>Kabin paling privat dengan tempat tidur, sofa, televisi, mini bar, dan kamar mandi pribadi dengan shower.</p></div></div></div>
+        <div class="wheels"><i></i><i></i></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-advance.jpg" alt="Advance Class"/><div class="glare"></div></div>
+        <div class="txt"><div class="no">02</div><div><h3>Advance Class</h3><p>Kabin pribadi dengan tempat tidur, televisi, mini bar, dan kamar mandi sendiri untuk perjalanan jauh yang tenang.</p></div></div></div>
+        <div class="wheels"><i></i><i></i></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-compact.jpg" alt="Compact Class"/><div class="glare"></div></div>
+        <div class="txt"><div class="no">03</div><div><h3>Compact Class</h3><p>Kabin praktis yang tetap nyaman: tempat tidur, televisi, mini bar, serta toilet dan shower bersama.</p></div></div></div>
+        <div class="wheels"><i></i><i></i></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-grand.jpg" alt="Grand Restaurant"/><div class="glare"></div></div>
+        <div class="txt"><div class="no">04</div><div><h3>Grand Restaurant</h3><p>Meja makan menghadap jendela besar, hidangan istimewa dinikmati bersama pemandangan yang terus berganti.</p></div></div></div>
+        <div class="wheels"><i></i><i></i></div></div>
+      <div class="car"><div class="body"><div class="win2"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/ruang-lounge.jpg" alt="Lounge"/><div class="glare"></div></div>
+        <div class="txt"><div class="no">05</div><div><h3>Lounge</h3><p>Ruang bersama yang hangat dan elegan untuk bersantai, berbincang, dan menikmati alunan musik.</p></div></div></div>
+        <div class="wheels"><i></i><i></i></div></div>
+      <div class="loco2"><div class="body"><div class="brand2">Nusantara<br/>Explore<small>Lokomotif · KAI</small></div><div class="grill"></div><div class="lamp"></div><div class="beam2"></div></div></div>
+    </div>
+    <div class="rail" aria-hidden="true"></div>
+    <div class="hint">Terus gulir untuk menyusuri rangkaian</div>
+  </div>
+</section>
+
+<section class="galeri" id="galeri">
+  <div class="batik" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">03 · Galeri</div>
+      <h2 style="margin-top:14px">Pemandangan dari <em>jendela kereta.</em></h2>
+      <div class="rule"></div>
+      <p class="lead">Brosur resmi peluncuran KA Nusantara Explore. Geser untuk melihat setiap halaman, ketuk untuk memperbesar.</p>
+    </div>
+    <div class="winrow rv">
+      <div class="win" data-src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-1.jpg"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-1.jpg" alt="Brosur halaman 1"/><span class="lbl">Halaman 01</span></div>
+      <div class="win" data-src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-2.jpg"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-2.jpg" alt="Brosur halaman 2"/><span class="lbl">Halaman 02</span></div>
+      <div class="win" data-src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-3.jpg"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-3.jpg" alt="Brosur halaman 3"/><span class="lbl">Halaman 03</span></div>
+      <div class="win" data-src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-4.jpg"><img src="https://alfikodev.github.io/nusantara-explore-assets/img/brosur-4.jpg" alt="Brosur halaman 4"/><span class="lbl">Halaman 04</span></div>
+    </div>
+    <div class="track2" aria-hidden="true"></div>
+
+    <div class="rv" style="margin-top:80px">
+      <div class="eyebrow">Foto Kegiatan Komunikasi Perusahaan</div>
+      <h2 style="margin-top:12px;font-size:clamp(28px,4vw,44px)">Momen yang <em>tercatat.</em></h2>
+    </div>
+    <div class="kegiatan">
+      <div class="foto rv" data-src="https://alfikodev.github.io/nusantara-explore-assets/img/peluncuran.jpg">
+        <img src="https://alfikodev.github.io/nusantara-explore-assets/img/peluncuran.jpg" alt="Seremoni pelepasan KA Nusantara Explore"/>
+        <span class="no">1</span>
+        <div class="cap"><b>Seremoni pelepasan perjalanan perdana</b><span>Dokumentasi peluncuran KA Nusantara Explore di peron gerbong Signature Class, dihadiri unsur pemerintah dan manajemen KAI sebagai bagian dari kegiatan publikasi perusahaan.</span><small>Sumber: Sekretariat Kabinet RI · @setkabgoid</small></div>
+      </div>
+      <div class="foto rv" data-src="https://alfikodev.github.io/nusantara-explore-assets/img/poster.jpg">
+        <img src="https://alfikodev.github.io/nusantara-explore-assets/img/poster.jpg" alt="Poster kampanye #AyoNaikKereta" style="object-position:center 68%"/>
+        <span class="no">2</span>
+        <div class="cap"><b>Kampanye promosi digital #AyoNaikKereta</b><span>Materi promosi resmi yang disebarkan melalui media sosial KAI (Instagram @kai121_) untuk memperkenalkan Nusantara Explore kepada publik.</span><small>Sumber: PT Kereta Api Indonesia (Persero)</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="boarding" id="tiket">
+  <div class="batik" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="eyebrow">Tiket Anda</div>
+      <h2 style="margin-top:14px">Cetak boarding pass <em>atas nama Anda.</em></h2>
+      <div class="rule"></div>
+      <p class="lead">Tulis nama Anda, pilih kelas, dan dapatkan boarding pass Nusantara Explore dengan QR code menuju weblog ini. Simpan dan bagikan.</p>
+      <form id="bpform" autocomplete="off">
+        <input id="bpname" type="text" maxlength="28" placeholder="Nama penumpang" aria-label="Nama penumpang" required="required"/>
+        <select id="bpclass" aria-label="Pilih kelas"><option>Signature Class</option><option>Advance Class</option><option>Compact Class</option></select>
+        <button class="btn gold" type="submit">Terbitkan tiket</button>
+      </form>
+    </div>
+    <div class="pass" id="pass" aria-live="polite">
+      <div class="main">
+        <div class="top"><div class="big">Nusantara Explore<small>Boarding Pass · PT Kereta Api Indonesia</small></div><div class="stamp2">BOARDING</div></div>
+        <div class="k" style="margin-top:22px">Nama penumpang</div>
+        <div class="nm" id="pnm">Penumpang</div>
+        <div class="v" id="pcls">Signature Class</div>
+        <div class="grid">
+          <div class="gerb"><div class="k">Gerbong</div><b id="pger">SG-1</b></div>
+          <div class="gerb"><div class="k">Kursi</div><b id="pseat">04A</b></div>
+          <div class="gerb"><div class="k">Dari</div><b>Jakarta</b></div>
+          <div class="gerb"><div class="k">Menuju</div><b>Nusantara</b></div>
+        </div>
+        <div class="grid" style="grid-template-columns:1fr 1fr 1fr">
+          <div><div class="k">Tanggal</div><div class="v" id="pdate">28 Sep 2026</div></div>
+          <div><div class="k">Keberangkatan</div><div class="v">Jalur 1 · 08.00 WIB</div></div>
+          <div><div class="k">Nomor tiket</div><div class="v" id="pno">NE-000000</div></div>
+        </div>
+      </div>
+      <div class="side2"><div class="qr" id="qr"></div><div class="sig3">Pindai untuk membuka<br/>jurnal komunikasi KAI</div></div>
+      <div class="dots" aria-hidden="true"></div>
+    </div>
+    <div class="pass-actions" id="passact" style="display:none">
+      <button class="btn gold" id="bpsave" type="button">Simpan sebagai gambar</button>
+      <button class="btn ghost" id="bpshare" type="button">Salin tautan</button>
+      <span class="note" id="bpnote"></span>
+    </div>
+  </div>
+</section>
+
+</b:if>
+<footer>
+  <div class="wrap">
+    <div class="stub rv">
+      <div><div class="big">Nusantara Explore<small>Jurnal Komunikasi KAI</small></div><p class="v" style="margin-top:16px">Weblog ini dikelola oleh Corporate Communication PT Kereta Api Indonesia (Persero) sebagai ruang informasi resmi seputar KA Nusantara Explore.</p></div>
+      <div><div class="k">Kontak Media</div><div class="v">Corporate Communication<br/>PT Kereta Api Indonesia (Persero)<br/>Jl. Perintis Kemerdekaan No. 1<br/>Bandung, Jawa Barat</div></div>
+      <div><div class="k">Hubungi Kami</div><div class="v"><a href="https://www.kai.id" target="_blank" rel="noopener">www.kai.id</a><br/>Contact Center 121<br/>Instagram @kai121_<br/>cs@kai.id</div></div>
+    </div>
+    <div class="credits"><span>© 2026 <b>PT Kereta Api Indonesia (Persero)</b> · Disusun untuk mata kuliah Teknik Public Relations (FSIK4308), Universitas Terbuka</span><span>Profil · Berita · Galeri</span></div>
+  </div>
+</footer>
+
+<div class="sndbar"><button class="sndbtn" id="sndbtn" type="button" aria-label="Suasana stasiun"><span class="bars"><i></i><i></i><i></i><i></i></span><span class="t lbl1">Suasana stasiun</span><span class="t lbl2">Matikan suara</span></button></div>
+<svg class="cross-train" id="crosstrain" viewBox="0 0 900 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs><linearGradient id="cg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#152A52"/><stop offset="1" stop-color="#070F1C"/></linearGradient></defs>
+  <g fill="url(#cg)" stroke="#C9A24E" stroke-width="2"><rect x="20" y="30" width="250" height="80" rx="12"/><rect x="290" y="30" width="250" height="80" rx="12"/><rect x="560" y="30" width="250" height="80" rx="12"/><path d="M830 110V50c0-14 20-26 44-26h6c8 0 20 10 20 20v66z"/></g>
+  <g fill="#E6C77A" opacity=".9"><rect x="40" y="48" width="42" height="30" rx="4"/><rect x="100" y="48" width="42" height="30" rx="4"/><rect x="160" y="48" width="42" height="30" rx="4"/><rect x="220" y="48" width="30" height="30" rx="4"/><rect x="310" y="48" width="42" height="30" rx="4"/><rect x="370" y="48" width="42" height="30" rx="4"/><rect x="430" y="48" width="42" height="30" rx="4"/><rect x="490" y="48" width="30" height="30" rx="4"/><rect x="580" y="48" width="42" height="30" rx="4"/><rect x="640" y="48" width="42" height="30" rx="4"/><rect x="700" y="48" width="42" height="30" rx="4"/><rect x="760" y="48" width="30" height="30" rx="4"/><rect x="845" y="48" width="36" height="26" rx="4"/></g>
+  <path d="M20 92h790" stroke="#C9A24E" stroke-width="3"/><circle cx="890" cy="84" r="7" fill="#fff"/>
+  <g fill="#0A1222" stroke="#C9A24E" stroke-width="2"><circle cx="60" cy="118" r="12"/><circle cx="230" cy="118" r="12"/><circle cx="330" cy="118" r="12"/><circle cx="500" cy="118" r="12"/><circle cx="600" cy="118" r="12"/><circle cx="770" cy="118" r="12"/><circle cx="860" cy="118" r="12"/></g>
+  <text x="400" y="134" font-family="Cormorant Garamond, serif" font-size="14" fill="#E6C77A" text-anchor="middle" letter-spacing="4">NUSANTARA EXPLORE</text>
+</svg>
+<div class="reader" id="reader">
+  <article>
+    <button class="close" id="rclose" aria-label="Tutup">✕</button>
+    <div id="rbody"></div>
+  </article>
+</div>
+<div class="lightbox" id="lb"><img id="lbimg" alt=""/></div>
+
+
+
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'></script>
+<script>
+//<![CDATA[
+document.documentElement.classList.add('js');const IS_HOME=!!document.getElementById('top');
+if(IS_HOME){
+// preloader
+addEventListener('load',()=>setTimeout(()=>document.getElementById('boarding').classList.add('done'),1900));
+setTimeout(()=>document.getElementById('boarding').classList.add('done'),4500);
+}
+// header
+const hdr=document.getElementById('hdr');
+const onScroll=()=>hdr.classList.toggle('solid',!IS_HOME||scrollY>40);onScroll();addEventListener('scroll',onScroll,{passive:true});
+const menu=document.getElementById('menu');document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+if(IS_HOME){
+// active link
+const secs=['profil','berita','galeri'].map(id=>document.getElementById(id));
+function navActive(){let cur=null;secs.forEach(sec=>{if(scrollY>=sec.offsetTop-innerHeight*0.45)cur=sec.id});menu.querySelectorAll('a').forEach(a=>a.classList.toggle('on',cur&&a.getAttribute('href')==='#'+cur))}
+addEventListener('scroll',navActive,{passive:true});navActive();
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+setTimeout(()=>document.documentElement.classList.add('ready'),6000);
+// clock
+const clk=document.getElementById('clock');if(clk)setInterval(()=>{clk.textContent=new Date().toLocaleTimeString('id-ID',{hour12:false})+' WIB'},1000);
+// split-flap
+const CH='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,';
+function flap(el){const t=el.dataset.text.toUpperCase();el.innerHTML='';let w=document.createElement('span');w.className='w';el.appendChild(w);const spans=[...t].map(c=>{const s=document.createElement('span');if(c===' '){s.className='sp';s.textContent='\u00a0';el.appendChild(s);w=document.createElement('span');w.className='w';el.appendChild(w)}else{s.textContent=CH[Math.random()*CH.length|0];w.appendChild(s)}return s});
+  spans.forEach((s,i)=>{if(s.className==='sp')return;const target=t[i];let n=0;const max=6+Math.random()*10;const iv=setInterval(()=>{n++;if(n>=max){s.textContent=target;clearInterval(iv)}else s.textContent=CH[Math.random()*CH.length|0]},45+i*0.6)})}
+const boardIO=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.flap').forEach((f,i)=>setTimeout(()=>flap(f),i*350));boardIO.disconnect()}}),{threshold:.25});
+boardIO.observe(document.getElementById('board'));
+document.querySelectorAll('.flap').forEach(f=>{f.textContent=f.dataset.text});
+// lightbox
+const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+document.querySelectorAll('[data-src]').forEach(el=>el.onclick=()=>{lbimg.src=el.dataset.src;lb.classList.add('open')});
+lb.onclick=()=>lb.classList.remove('open');
+addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open')}});
+
+}
+// ===== mode siang/malam
+const root=document.documentElement;
+try{if(localStorage.getItem('ne-mode')==='siang')root.dataset.mode='siang'}catch(e){}
+document.getElementById('mode').onclick=()=>{const siang=root.dataset.mode!=='siang';if(siang)root.dataset.mode='siang';else delete root.dataset.mode;try{localStorage.setItem('ne-mode',siang?'siang':'malam')}catch(e){}};
+if(IS_HOME){
+// ===== progress train
+const pt=document.getElementById('ptrack'),pfill=pt.querySelector('.fill'),ploco=pt.querySelector('.loco'),stns=[...pt.querySelectorAll('.stn')];
+function layoutStations(){const H=document.documentElement.scrollHeight-innerHeight;stns.forEach(s=>{const el=document.getElementById(s.dataset.for);s.style.left=Math.min(99,Math.max(1,(el.offsetTop-80)/H*100))+'%'})}
+function prog(){const H=document.documentElement.scrollHeight-innerHeight;const p=Math.min(1,Math.max(0,scrollY/H));pfill.style.width=p*100+'%';ploco.style.transform=`translateX(${p*innerWidth-30}px)`;stns.forEach(s=>s.classList.toggle('on',parseFloat(s.style.left)/100<=p+0.005))}
+addEventListener('scroll',prog,{passive:true});addEventListener('resize',()=>{layoutStations();prog()});setTimeout(()=>{layoutStations();prog()},300);
+}
+// ===== sound
+const A={amb:new Audio('https://alfikodev.github.io/nusantara-explore-assets/audio/ambience.mp3'),pa:new Audio('https://alfikodev.github.io/nusantara-explore-assets/audio/pengumuman.mp3'),horn:new Audio('https://alfikodev.github.io/nusantara-explore-assets/audio/horn.mp3')};
+A.amb.loop=true;A.amb.volume=.45;A.pa.volume=.9;A.horn.volume=.7;let sndOn=false,paPlayed=false;
+function setSound(on){sndOn=on;document.getElementById('sndbtn').classList.toggle('on',on);
+  if(on){A.amb.play().catch(()=>{});if(!paPlayed){paPlayed=true;A.pa.currentTime=0;A.pa.play().catch(()=>{});A.amb.volume=.22;A.pa.onended=()=>{A.amb.volume=.45}}}
+  else{A.amb.pause();A.pa.pause()}}
+document.getElementById('sndbtn').onclick=()=>setSound(!sndOn);
+const sh=document.getElementById('sndhero');if(sh)sh.onclick=()=>{setSound(true);};
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&sndOn){A.amb.pause()}else if(sndOn){A.amb.play().catch(()=>{})}});
+if(IS_HOME){
+// ===== jelajahi gerbong (pinned horizontal)
+const jel=document.getElementById('jelajah'),pin=document.getElementById('pin'),train=document.getElementById('train'),pinprog=document.getElementById('pinprog');
+let jelOn=false,lastX=0,moveT;
+function jelLayout(){if(innerWidth<=900){jel.style.height='';train.style.transform='';jelOn=false;return}jelOn=true;const extra=train.scrollWidth-innerWidth+innerWidth*0.12;jel.style.height=(pin.offsetHeight+extra+jel.querySelector('.intro').offsetHeight)+'px'}
+function jelScroll(){if(!jelOn)return;const top=pin.offsetTop+jel.offsetTop-0;const dist=jel.offsetHeight-pin.offsetHeight-jel.querySelector('.intro').offsetHeight;const y=scrollY-(jel.offsetTop+jel.querySelector('.intro').offsetHeight);const p=Math.min(1,Math.max(0,y/dist));const x=-(train.scrollWidth-innerWidth+innerWidth*0.12)*p;train.style.transform=`translateX(${x}px)`;pinprog.style.width=p*100+'%';if(Math.abs(x-lastX)>0.5){pin.classList.add('moving');clearTimeout(moveT);moveT=setTimeout(()=>pin.classList.remove('moving'),180)}lastX=x}
+addEventListener('resize',()=>{jelLayout();jelScroll();layoutStations()});addEventListener('scroll',jelScroll,{passive:true});
+addEventListener('load',()=>{jelLayout();jelScroll();layoutStations();prog()});setTimeout(()=>{jelLayout();jelScroll()},800);
+// ===== boarding pass
+const pass=document.getElementById('pass');let qr=null;
+document.getElementById('bpform').onsubmit=e=>{e.preventDefault();const name=document.getElementById('bpname').value.trim()||'Penumpang';const cls=document.getElementById('bpclass').value;
+  document.getElementById('pnm').textContent=name;document.getElementById('pcls').textContent=cls;
+  const code=cls.split(' ')[0].slice(0,2).toUpperCase();document.getElementById('pger').textContent=code+'-'+(1+Math.floor(Math.random()*4));
+  document.getElementById('pseat').textContent=String(1+Math.floor(Math.random()*18)).padStart(2,'0')+'ABCD'[Math.floor(Math.random()*4)];
+  document.getElementById('pno').textContent='NE-'+String(Math.floor(100000+Math.random()*900000));
+  document.getElementById('pdate').textContent=new Date().toLocaleDateString('id-ID',{day:'2-digit',month:'short',year:'numeric'});
+  const url=location.href.split('#')[0];const box=document.getElementById('qr');box.innerHTML='';
+  if(window.QRCode){qr=new QRCode(box,{text:url,width:128,height:128,colorDark:'#0B1F3A',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M})}
+  pass.classList.remove('show');requestAnimationFrame(()=>requestAnimationFrame(()=>pass.classList.add('show')));document.getElementById('passact').style.display='flex';
+  if(sndOn){A.horn.currentTime=0;A.horn.play().catch(()=>{})}
+  pass.scrollIntoView({behavior:'smooth',block:'center'})};
+document.getElementById('bpsave').onclick=async()=>{const note=document.getElementById('bpnote');if(!window.html2canvas){note.textContent='Fitur simpan gambar tidak tersedia di sini.';return}note.textContent='Menyiapkan gambar...';
+  try{const c=await html2canvas(pass,{backgroundColor:null,scale:2,useCORS:true});const a=document.createElement('a');a.download='boarding-pass-nusantara-explore.png';a.href=c.toDataURL('image/png');document.body.appendChild(a);a.click();a.remove();note.textContent='Gambar boarding pass tersimpan ke perangkat Anda.'}catch(err){note.textContent='Gambar tidak bisa disimpan di tampilan ini. Coba screenshot langsung.'}};
+document.getElementById('bpshare').onclick=async()=>{const note=document.getElementById('bpnote');try{await navigator.clipboard.writeText(location.href.split('#')[0]);note.textContent='Tautan weblog tersalin.'}catch(e){note.textContent='Salin manual: '+location.href.split('#')[0]}};
+}
+// ===== easter eggs
+let clicks=0,ct;document.querySelector('.logo').addEventListener('click',e=>{clicks++;clearTimeout(ct);ct=setTimeout(()=>clicks=0,900);if(clicks>=3){clicks=0;e.preventDefault();const t=document.getElementById('crosstrain');t.classList.remove('go');void t.offsetWidth;t.classList.add('go');A.horn.currentTime=0;A.horn.play().catch(()=>{})}});
+addEventListener('keydown',e=>{if(IS_HOME&&(e.key==='ArrowRight'||e.key==='ArrowLeft')){if(document.activeElement.tagName!=='INPUT')document.querySelectorAll('.flap').forEach((f,i)=>setTimeout(()=>flap(f),i*150))}});
+
+//]]>
+</script>
+</body>
+</html>
