@@ -439,6 +439,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
 ]]></b:skin>
 </head>
 <body expr:class='data:view.isHomepage ? "home" : "single"'>
+<b:section class='test' id='test'><b:widget id='HTML2' locked='false' title='Penanda' type='HTML' version='2' visible='true'><b:includable id='main'><div class='tes2' style='position:absolute;width:1px;height:1px;overflow:hidden;opacity:0'>Nusantara Explore</div></b:includable></b:widget></b:section>
 <b:if cond='data:view.isHomepage'>
 
 
@@ -474,6 +475,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
       <li><a expr:href='data:blog.homepageUrl + "#profil"'>Profil</a></li>
       <li><a expr:href='data:blog.homepageUrl + "#berita"'>Berita</a></li>
       <li><a expr:href='data:blog.homepageUrl + "#galeri"'>Galeri</a></li>
+      <li><a expr:href='data:blog.homepageUrl + "p/tentang-weblog.html"'>Tentang</a></li>
     </ul>
   </div>
 </header>
@@ -645,7 +647,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
           <b:else/>
             <b:loop values='data:posts' var='post'>
               <article class='post' expr:id='"post-" + data:post.id'>
-                <div class='dateline'><i><b:if cond='data:post.labels'><b:loop index='li' values='data:post.labels' var='l'><b:if cond='data:li == 0'><data:l.name/></b:if></b:loop><b:else/>Berita</b:if></i> <b:if cond='data:view.isPost'>Jakarta, <data:post.date/></b:if></div>
+                <div class='dateline'><i><b:if cond='data:view.isPage'>Halaman<b:else/><b:if cond='data:post.labels'><b:loop index='li' values='data:post.labels' var='l'><b:if cond='data:li == 0'><data:l.name/></b:if></b:loop><b:else/>Berita</b:if></b:if></i> <b:if cond='data:view.isPost'>Jakarta, <data:post.date/></b:if></div>
                 <h1 class='ptitle'><data:post.title/></h1>
                 <div class='byline'>Oleh <data:post.author.name/> &#183; Corporate Communication PT Kereta Api Indonesia (Persero)</div>
                 <div class='post-body'><data:post.body/></div>
@@ -790,7 +792,7 @@ html[data-mode="siang"] .berita.postpage{background:#FBF6EC}
       <div><div class="k">Kontak Media</div><div class="v">Corporate Communication<br/>PT Kereta Api Indonesia (Persero)<br/>Jl. Perintis Kemerdekaan No. 1<br/>Bandung, Jawa Barat</div></div>
       <div><div class="k">Hubungi Kami</div><div class="v"><a href="https://www.kai.id" target="_blank" rel="noopener">www.kai.id</a><br/>Contact Center 121<br/>Instagram @kai121_<br/>cs@kai.id</div></div>
     </div>
-    <div class="credits"><span>© 2026 <b>PT Kereta Api Indonesia (Persero)</b> · Disusun untuk mata kuliah Teknik Public Relations (FSIK4308), Universitas Terbuka</span><span>Profil · Berita · Galeri</span></div>
+    <div class="credits"><span>© 2026 <b>PT Kereta Api Indonesia (Persero)</b> · Disusun untuk mata kuliah Teknik Public Relations (FSIK4308), Universitas Terbuka</span><span>Profil · Berita · Galeri · <a expr:href='data:blog.homepageUrl + "p/tentang-weblog.html"' style="text-decoration:underline">Tentang Weblog</a></span></div>
   </div>
 </footer>
 
